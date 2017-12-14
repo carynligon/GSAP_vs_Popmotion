@@ -1,0 +1,21 @@
+.insurability-score-wrap {
+  margin: 0 auto;
+  position: relative;
+  width: 400px;
+}
+svg {
+  height: 200px;
+  overflow: visible;
+  width: 200px;
+}
+.counter {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+.data-point {
+  background-color: #fff;
+  height: 20px;
+  position: absolute;
+  width: 20px;
+}

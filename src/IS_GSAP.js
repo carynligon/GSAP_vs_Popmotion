@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TweenMax, Sine } from 'gsap';
+import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
 
 class ScoreComponent extends Component {
   constructor() {
@@ -7,17 +8,20 @@ class ScoreComponent extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    TweenMax.to(this.path, 2, {
-      strokeDashoffset: 0,
+    TweenMax.fromTo(this.path, 2, {
+      drawSVG: 0,
       ease: Sine.easeOut
+    },{
+      drawSVG: '100%',
     })
   }
   componentDidMount() {
-    const pathLength = this.path.getTotalLength();
-    this.path.style['stroke-dasharray'] = pathLength;
-    this.path.style['stroke-dashoffset'] = pathLength;
+    TweenMax.set(this.path, {
+      drawSVG: 0
+    });
   }
   render() {
+    console.log(DrawSVGPlugin)
     return (
       <div className="is-wrapper" onClick={this.handleClick}>
         <svg className="progress-icon" width="250" height="250" viewBox="0 0 32 32">

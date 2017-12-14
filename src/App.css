@@ -3,10 +3,3 @@ body {
     color: #fff;
     height: 100vh;
 }
-svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -125px;
-    margin-top: -125px;
-}
