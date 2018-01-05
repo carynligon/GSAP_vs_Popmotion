@@ -1,21 +1,63 @@
-.insurability-score-wrap {
-  margin: 0 auto;
-  position: relative;
-  width: 400px;
-}
 svg {
-  height: 200px;
-  overflow: visible;
-  width: 200px;
+  transform: scaleX(-1);
 }
-.counter {
-  position: absolute;
-  top: 40%;
-  left: 20%;
+#graphLine {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 5;
 }
-.data-point {
-  background-color: #fff;
-  height: 20px;
-  position: absolute;
-  width: 20px;
+#graphLine-track {
+    fill: none;
+    stroke: #aaa;
+    stroke-width: 5;
+}
+#graphDot {
+    fill: #34c5ee;
+    stroke: #fff;
+    stroke-width: 3;
+    visibility: hidden;
+}
+#dragger {
+    visibility: hidden;
+}
+#tooltip {
+    fill: #34c5ee;
+    height: 30px;
+    width: 80px;
+}
+#tooltipText {
+    fill: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    stroke: #fff;
+}
+#tooltipPointer {
+    fill: #34c5ee;
+}
+tspan {
+    visibility: hidden;
+}
+.chart-labels-container {
+    background-color: #314760;
+    color: #fff;
+    padding: 1rem 0;
+}
+.chart-labels-container .inner div {
+    text-align: center;
+    width: calc(100% / 3);
+}
+.chart-labels-container .inner {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+@keyframes blink {
+    0% {
+        stroke: rgba(240,240,240,0.05);
+    }
+    100% {
+        stroke: rgba(240,240,240,0.10);
+    }
 }
